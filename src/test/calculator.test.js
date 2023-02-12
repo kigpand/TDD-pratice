@@ -30,6 +30,12 @@ describe("Calculator", () => {
     expect(cal.value).toBe(10);
   });
 
+  it("add should throw an error", () => {
+    expect(() => {
+      cal.add(101);
+    }).toThrow("Value can not be");
+  });
+
   it("subtract", () => {
     cal.set(9);
     cal.subtract(1);
